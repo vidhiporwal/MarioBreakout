@@ -1,0 +1,367 @@
+@import url("https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Tangerine", cursive;
+  font-size: 40px;
+}
+
+#breakout {
+  z-index: 10;
+  display: none;
+  top: 20px;
+  left: 500px;
+  position: absolute;
+  /* background-color: rgba(0, 0, 0, 0.246); */
+  background-color: rgba(158, 201, 40, 0.281);
+}
+img {
+  width: 400px;
+  height: 700px;
+  z-index: 20;
+  position: absolute;
+  margin-top: -725px;
+}
+.score {
+  margin-top: -589px;
+  margin-left: 1175px;
+  width: 300px;
+  height: 280px;
+}
+.card {
+  font-family: "Tangerine", cursive;
+  margin-top: -589px;
+  margin-left: 1185px;
+  width: 313px;
+  padding-top: 2.2rem;
+  padding-left: 1.5em;
+  position: absolute;
+  font-size: 50px;
+  height: 338px;
+  z-index: 60;
+}
+.score_up,
+.life,
+.level {
+  font-family: "Tangerine", cursive;
+  font-size: 50px;
+}
+.rule {
+  font-family: sans-serif cursive;
+  font-size: 35px;
+  width: 500px;
+  height: 500px;
+  background: rgba(37, 190, 201, 0.45);
+  box-shadow: 0 8px 32px 0 rgba(155, 230, 223, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  margin-left: 597px;
+  margin-top: -629px;
+  position: absolute;
+  font: bolder;
+  font-weight: 900;
+  padding-left: 20px;
+  padding-right: 10px;
+  padding-top: 20px;
+}
+
+.mode {
+  width: 200px;
+  height: 43px;
+  border: 4px solid #053816;
+  font-family: "Tangerine", cursive;
+  font-size: 40px;
+  background: #52c75c;
+  position: absolute;
+  padding-bottom: 10px;
+  margin-top: -712px;
+  margin-left: 1290px;
+  z-index: 50;
+  cursor: pointer;
+}
+
+.mode:hover, .mute:hover {
+  background: #1e945d;
+  box-shadow: 0 0 10px 0 #2ea82a inset, 0 0 10px 4px #a8782a;
+}
+.mode_display {
+  display: none;
+}
+.mute{
+  width: 200px;
+  height: 43px;
+  border: 4px solid #053810;
+  font-family: "Tangerine", cursive;
+  font-size: 40px;
+  background: #52c758;
+  position: absolute;
+  padding-bottom: 10px;
+  margin-top: -612px;
+  margin-left: 1290px;
+  z-index: 50;
+  cursor: pointer;
+}
+.mute_on{
+  border: 4px solid green; 
+}
+
+.sword {
+  margin-left: 397px;
+  width: 260px;
+  height: 650px;
+  z-index: 20;
+  position: absolute;
+  margin-top: -725px;
+}
+.back {
+  width: 100vw;
+  height: 100vh;
+  background: url("img/night.jpg");
+  background-size: cover;
+  z-index: -3;
+}
+
+.dark {
+  background: url("img/bg_main.jpg");
+  background-size: cover;
+}
+.alla {
+  margin-left: 1182px;
+  margin-top: -376px;
+  z-index: 2;
+  height: 350px;
+  width: 350px;
+}
+
+/* button */
+.btn {
+  width: 100px;
+  height: 43px;
+  border: 4px solid #02630a;
+  font-family: "Tangerine", cursive;
+  font-size: 40px;
+  background: #61ca89;
+  position: absolute;
+  padding-bottom: 10px;
+  margin-top: -412px;
+  margin-left: 157px;
+  z-index: 50;
+  cursor: pointer;
+}
+
+/* Pause */
+
+.pause {
+  display: none;
+  width: 100px;
+  height: 43px;
+  border: 4px solid #056302;
+  font-family: "Tangerine", cursive;
+  font-size: 40px;
+  background: #37c065;;
+  position: absolute;
+  padding-bottom: 10px;
+  margin-top: -412px;
+  margin-left: 157px;
+  z-index: 50;
+  cursor: pointer;
+}
+
+.speed_b,
+.width_b {
+  display: none;
+  width: 180px;
+  height: 53px;
+  border: 4px solid ;
+  font-family: "Tangerine", cursive;
+  font-size: 40px #0a6302;
+  background: #0db136;
+  position: absolute;
+  padding: 5px 10px;
+  padding-bottom: 10px;
+  margin-top: -322px;
+  margin-left: 115px;
+  z-index: 50;
+}
+.width_b {
+  width: 180px;
+  margin-top: -232px;
+  margin-left: 115px;
+}
+
+.level_up,
+.life_down {
+  display: none;
+  width: 110px;
+  height: 53px;
+  border: 4px solid #026302;
+  font-family: "Tangerine", cursive;
+  font-size: 40px;
+  background: #21b45e;
+  position: absolute;
+  padding: 5px 10px;
+  padding-bottom: 10px;
+  margin-top: -492px;
+  margin-left: 150px;
+  z-index: 50;
+}
+
+.level_up {
+  width: 140px;
+  margin-top: -572px;
+  margin-left: 135px;
+}
+
+.btn:hover,
+.pause:hover {
+  background: linear-gradient(#7fce24, #aecc29);
+  box-shadow: 0 0 10px 0 #2aa869 inset, 0 0 10px 4px #3eca31;
+  color: #47aa43;
+}
+
+.clouds {
+  position: absolute;
+  margin-top: 150px;
+}
+
+.cloud {
+  width: 200px;
+  height: 60px;
+  background: rgb(253, 245, 233);
+  border-radius: 200px;
+  -moz-border-radius: 200px;
+  -webkit-border-radius: 200px;
+  margin-top: 100px;
+  position: absolute;
+}
+
+.cloud:before,
+.cloud:after {
+  content: "";
+  position: absolute;
+  background: rgb(253, 245, 233);
+  width: 100px;
+  height: 80px;
+  position: absolute;
+  top: -15px;
+  left: 10px;
+
+  border-radius: 100px;
+  -moz-border-radius: 100px;
+  -webkit-border-radius: 100px;
+
+  -webkit-transform: rotate(30deg);
+  transform: rotate(30deg);
+  -moz-transform: rotate(30deg);
+}
+
+.cloud:after {
+  width: 120px;
+  height: 120px;
+  top: -55px;
+  left: auto;
+  right: 15px;
+}
+@keyframes moveclouds {
+  0% {
+    margin-left: 1000px;
+  }
+  100% {
+    margin-left: -1000px;
+  }
+}
+@-moz-keyframes moveclouds {
+  0% {
+    margin-left: 1000px;
+  }
+  100% {
+    margin-left: -1000px;
+  }
+}
+@-o-keyframes moveclouds {
+  0% {
+    margin-left: 1000px;
+  }
+  100% {
+    margin-left: -1000px;
+  }
+}
+
+/*Time to animate*/
+.x1 {
+  -webkit-animation: moveclouds 20s linear infinite;
+  animation: moveclouds 20s linear infinite;
+  -moz-animation: moveclouds 20s linear infinite;
+  -o-animation: moveclouds 20s linear infinite;
+}
+
+/*variable speed, opacity, and position of clouds for realistic effect*/
+.x2 {
+  left: 200px;
+
+  -webkit-transform: scale(0.6);
+  -moz-transform: scale(0.6);
+  transform: scale(0.6);
+  opacity: 0.5; /*opacity proportional to the size*/
+
+  /*Speed will also be proportional to the size and opacity*/
+  /*More the speed. Less the time in 's' = seconds*/
+  -webkit-animation: moveclouds 30s linear infinite;
+  animation: moveclouds 30s linear infinite;
+  -moz-animation: moveclouds 30s linear infinite;
+  -o-animation: moveclouds 30s linear infinite;
+}
+
+.x3 {
+  left: -150px;
+  top: -100px;
+
+  -webkit-transform: scale(0.8);
+  -moz-transform: scale(0.8);
+  transform: scale(0.8);
+  opacity: 0.5; /*opacity proportional to the size*/
+
+  -webkit-animation: moveclouds 25s linear infinite;
+  animation: moveclouds 25s linear infinite;
+  -moz-animation: moveclouds 25s linear infinite;
+  -o-animation: moveclouds 25s linear infinite;
+}
+
+.x4 {
+  left: 300px;
+  top: -150px;
+
+  -webkit-transform: scale(0.75);
+  -moz-transform: scale(0.75);
+  transform: scale(0.75);
+  opacity: 0.5; /*opacity proportional to the size*/
+
+  -webkit-animation: moveclouds 22s linear infinite;
+  animation: moveclouds 22s linear infinite;
+  -moz-animation: moveclouds 22s linear infinite;
+  -o-animation: moveclouds 22s linear infinite;
+}
+
+.x5 {
+  left: 150px;
+  top: -150px;
+
+  -webkit-transform: scale(0.8);
+  -moz-transform: scale(0.8);
+  transform: scale(0.8);
+  opacity: 0.4; /*opacity proportional to the size*/
+
+  -webkit-animation: moveclouds 20s linear infinite;
+  animation: moveclouds 20s linear infinite;
+  -moz-animation: moveclouds 20s linear infinite;
+  -o-animation: moveclouds 20s linear infinite;
+}
+
+/*hide*/
+
+.hide {
+  display: none;
+}

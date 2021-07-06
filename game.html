@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    
+
+    <link rel="stylesheet" href="game2.css" />
+    <style>
+      * {
+        font-family: "Germania One";
+      }
+
+      #gameover {
+        z-index: 70;
+        position: absolute;
+        top: 20px;
+        left: 500px;
+        width: 610px;
+        height: 710px;
+        background: rgba(0, 0, 0, 0.5);
+        display: none;
+      }
+      #youwon {
+        width: 500px;
+        background-color: rgb(199, 121, 58);
+        box-shadow: 0 0 10px 10px rgb(209, 143, 37); 
+        border: 3px solid Black;
+        padding: 10px;
+        margin-left: 60px;
+        margin-top: 180px;
+        display: none;
+      }
+      #youlose {
+        width: 400px;
+        text-align: center;
+        background-color: rgb(199, 121, 58);
+        box-shadow: 0 0 10px 10px rgb(209, 143, 37); 
+        padding: 10px;
+        border: 3px solid Black;
+        height: 100px;
+        margin-left: 110px;
+        margin-top: 150px;
+        display: none;
+      }
+      #restart {
+        text-align: center;
+        margin-top: 120px;
+        margin-left: 170px;
+        cursor: pointer;
+        font-size: 1.25em;
+        color: #fff;
+        padding: 10px;
+        width: 50%;
+        background-color: rgb(41, 41, 41);
+      }
+      #restart:hover{
+        background-color: black;
+        box-shadow: 0 0 10px 10px rgb(209, 143, 37); 
+      }
+    </style>
+  </head>
+  <body>
+    <div id="gameover">
+      <div id="youwon">Congratulations! You Won!</div>
+      <div id="youlose">Sorry! You Lose!</div>
+      <div id="restart">Play Again!</div>
+    </div>
+
+    <canvas
+      id="breakout"
+      width="600"
+      height="700"
+      style="display: none"
+    ></canvas>
+
+    <div class="back">
+      <div class="clouds">
+        <div class="cloud x1"></div>
+        <div class="cloud x2"></div>
+        <div class="cloud x3"></div>
+        <div class="cloud x4"></div>
+        <div class="cloud x5"></div>
+      </div>
+    </div>
+    <img src="img/scroll_1.png" alt="" />
+    <img src="img/sword.png" alt="" class="sword" />
+    <div class="rule">
+      
+      It's your turn to help Mario collect all the prize blocks.
+
+      <br />
+      <br />
+      Use Arrow Keys to Control the Paddle and restrict ball from falling down.
+      <br />
+      <br>
+      Random Power-ups are given to you for 10s. Use them wisely.
+      <br>
+      -> Width boost.
+      <br>
+      -> Speed boost.
+    </div>
+
+    <div class="level_up">Level up!</div>
+    <div class="life_down">Life --</div>
+    <button class="btn">Start</button>
+    <button class="pause">Pause</button>
+    <button class="mode dark_mode mode_display">Dark Mode</button>
+    <button class="mode light_mode">Light Mode</button>
+    <button class="mute">Mute</button>
+
+
+    <div class="power_up">
+      <div class="speed_b">Speed Boost!</div>
+      <div class="width_b">Width Boost!</div>
+    </div>
+    <!-- <script src="game.js"></script> -->
+    <img src="img/score.png" alt="" class="score" />
+    <div class="card">
+      Score : <span class="score_up">0</span> <br />
+      Life : <span class="life">0</span> <br />
+      Level : <span class="level">0</span>
+    </div>
+    <img src="img/alla.png" alt="" class="alla" />
+
+    <script src="game.js"></script>
+
+    <script src="components.js"></script>
+    <script src="game_main.js"></script>
+  </body>
+</html>
